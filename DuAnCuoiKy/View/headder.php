@@ -1,4 +1,4 @@
-<header class="row no-gutters ">
+<header  class="row no-gutters fixed-top">
     <style>
         /* CSS tùy chỉnh cho header */
 .header_inner {

@@ -1,5 +1,5 @@
 
-<div class="table-responsive">
+<div class="table-responsive" style="margin-top:100px;">
   <?php
   // khi nào hiển thị, khi giỏ hàng tồn tại và có hàng
   if(isset($_SESSION['cart']) && count($_SESSION['cart'])>0){

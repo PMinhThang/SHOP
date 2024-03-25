@@ -5,18 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-<div class="super_container">
-	
-	<!-- Header -->
+<body style="margin-top:100px;">
 
-	
-	<!-- Home -->
-
-	<div class="row">
-
-
-</div>
 
 	<!-- Promo -->
 
@@ -24,8 +14,8 @@
 
 	<!-- New Arrivals -->
 
-	<div class="arrivals">
-		<div class="container">
+	<div class="arrivals" >
+		<div class="container" >
 			<div class="row">
 				<div class="col">
 					<div class="section_title_container text-center">
@@ -71,7 +61,7 @@
 
 
 
-            <section id="examples" class="text-center">
+            <section id="examples" class="text-center" >
 	</br>
 </br>
 
@@ -87,7 +77,7 @@
             </div>
 
 				<!-- Product -->
-        <div class="row">
+        <div class="row" >
          <?php
          $hh=new hanghoa();
          $result=$hh->getHangHoaNew();
@@ -95,7 +85,7 @@
          ?>
 
               <!--Grid column-->
-                <div class="col-lg-3 product_col">
+                <div class="col-lg-3 product_col" >
 					<a  href="index.php?action=sanpham&act=sanphamchitiet&id=<?php echo $set['mahh'];?>">
                         <div class="product">
                             <div class="view overlay z-depth-1-half">
@@ -139,7 +129,7 @@
 
       </div>
       <!--Grid row-->
-      <div class="row">
+      <div class="row" >
          <?php
          $hh=new hanghoa();
          $result=$hh->getHangHoaSale();
