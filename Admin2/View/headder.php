@@ -1,69 +1,57 @@
-
-<header class="row no-gutters">
+<header class="container no-gutters">
     <!-- nav san pham -->
-    <section class="col-12" style="height:40px;">
+    <section class="col-md-12" style="height:40px;">
         <div class="col-12">
             <div class="row">
 
-                <!-- test -->
-                <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                <!-- Navigation -->
+                <nav class="navbar navbar-expand-md navbar-light bg-light">
                     <!-- Brand -->
                     <a class="navbar-brand" href="#">Logo</a>
 
+                    <!-- Toggle button for mobile -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
                     <!-- Links -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Trang Chủ</a>
-                        </li>
-                        
-                        <!-- Quản trị Doanh Mục -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                Quản Trị Doanh Mục
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="index.php?action=loai">Loại Sản Phẩm</a>
-                                <a class="dropdown-item" href="index.php?action=hanghoa">Sản Phẩm</a>
-                                <a class="dropdown-item" href="index.php?action=cthanghoa">Chi tiết Sản Phẩm</a>
-                                <a class="dropdown-item" href="#">Loại menu</a>
-                            </div>
-                        </li>
-                        <!-- Thống kê -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                Thống Kê
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="index.php?action=thongke">Sản Phẩm bán được nhiều Nhất</a>
-                                <a class="dropdown-item" href="#">Sản Phẩm chưa được giao</a>
-                                <a class="dropdown-item" href="#">Sản phẩm bán ít nhất</a>
-                                <a class="dropdown-item" href="">Thống kê</a>
-                            </div>
-                        </li>
-                        <!-- Báo cáo -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                Báo Cáo
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Tháng</a>
-                                <a class="dropdown-item" href="#">Quý</a>
-                                <a class="dropdown-item" href="#">Năm</a>
-                            </div>
-                        </li>
-                        <!-- Báo cáo Tồn kho -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Tồn Kho</a>
-                        </li>
-                    </ul>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.php?action=hanghoa">Trang Chủ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Quản Trị Doanh Mục
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                                    <a class="dropdown-item" href="index.php?action=loai">Loại Sản Phẩm</a>
+                                    <a class="dropdown-item" href="index.php?action=cthanghoa">Chi tiết Sản Phẩm</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.php?action=thongke">Thống kê</a>
+                            </li>
+                           
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Báo Cáo
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                    <a class="dropdown-item" href="#">Tháng</a>
+                                    <a class="dropdown-item" href="#">Quý</a>
+                                    <a class="dropdown-item" href="#">Năm</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tồn Kho</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
-                <!-- end test -->
+                <!-- End Navigation -->
             </div>
         </div>
 
     </section>
-
-
-
 </header>
-<!-- dang ky -->

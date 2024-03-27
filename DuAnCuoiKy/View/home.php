@@ -197,8 +197,8 @@
 
 	<!-- Footer -->
 
-	<footer class="footer">
-		<div class="container">
+	<footer class="footer ">
+		<div class="container  text-center">
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<div class="footer_logo"><a href="#">Kissnote</a></div>

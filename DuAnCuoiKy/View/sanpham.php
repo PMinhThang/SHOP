@@ -32,7 +32,7 @@ if (isset($_GET['action'])) {
         $ac = 2;
     }
     elseif(isset($_GET['act']) && $_GET['act'] == 'timkiem'){
-        $ac=3;
+        $ac = 3;
     }
     elseif(isset($_GET['act']) && $_GET['act'] == 'sanpham')
     {
@@ -58,7 +58,7 @@ if (isset($_GET['action'])) {
                 }
                 if($ac==3)
                 {
-                    echo '<h3  class="product_price">TẤT CẢ SẢN PHẨM TÌM KIẾM </h3>';
+                    echo '<h3  class="product_price">TẤT CẢ SẢN PHẨM TÌM KIẾM</h3>';
                 }
              ?>
           </div>

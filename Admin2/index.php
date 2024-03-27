@@ -37,13 +37,7 @@ function myModelClass($classname)
 
 <body>
 <!-- Thanh header tao menu -->
-<?php
-        if(isset($_SESSION['admin']))
-        {
-            include "View/headder.php";
-        }
-           
-        ?>
+
         <!-- end hinh dong -->
         <!-- phan thân -->
         <div class="container">
@@ -59,16 +53,12 @@ function myModelClass($classname)
         //end controller
             
         ?>
+        
         </div>
         <!-- end menu right -->
     </div>
     <!-- footer -->
-    <?php
-     if(isset($_SESSION['admin']))
-     {
-        include "View/footer.php";
-     }
-    ?>
+   
     <!-- end footer -->
    
 </body>

@@ -1,4 +1,6 @@
- 
+<?php
+ include "View/headder.php";
+?>
         <meta charset="UTF-8">
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -61,5 +63,7 @@
         </select>
         <!-- <div style=" width:50%;  float: right"   id="chart_div1">dsfd</div>     -->
       </div>
- 
+ <?php
+ include "View/footer.php";
+?>
  

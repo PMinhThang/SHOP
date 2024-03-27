@@ -1,33 +1,35 @@
-
-      <div class="card mt-3">
-        <div class="card-header info">
-          QUẢN LÝ LOẠI HÀNG
+<?php
+ include "View/headder.php";
+?>
+   <div class="col-md-12" style="margin-top:50px;">
+  <div class="card">
+    <div class="card-header bg-info text-white">
+      QUẢN LÝ LOẠI HÀNG
+    </div>
+    <div class="card-body">
+      <form action="index.php?action=loai&act=loai_action" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="file">Chọn hình ảnh:</label>
+          <input type="file" name="file" id="file" class="form-control-file">
         </div>
-        <div class="card-body">
-        <form action="index.php?action=loai&act=loai_action" method="post" enctype="multipart/form-data">
-          <input type="file" name="file" id="">
-          <input type="submit" name="submit" value="Submit">
-        </form>
-
-            <div class="form-group">
-                <label for="">Mã danh mục</label>
-                <input type="text" readonly name="id" class="form-control" >
-              </div>
-              <div class="form-group">
-                <label for="">Tên danh mục</label>
-                <input type="text" name="namecata" class="form-control">
-
-              </div>
-              <div class="form-group">
-                <label for="">Menu số:</label>
-                <input type="text" name="menu"  class="form-control">
-
-              </div>
-
-              <div class="form-group">
-                  <button type="submit" class="btn btn-primary">Lưu</button>
-                  <a href="" class="btn btn-danger">Danh sách</a>
-              </div>
-          </form>
+        <div class="form-group">
+          <label for="namecata">Tên danh mục:</label>
+          <input type="text" name="namecata" id="namecata" class="form-control">
         </div>
-      </div>
+        <div class="form-group">
+          <label for="menu">Menu số:</label>
+          <input type="text" name="menu" id="menu" class="form-control">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Lưu</button>
+          <a href="#" class="btn btn-danger">Danh sách</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+      <?php
+ include "View/footer.php";
+?>

@@ -1,3 +1,6 @@
+<?php
+ include "View/headder.php";
+?>
 <form name="frmloaihang" action="" method="post">
   <div class="card mt-3">
     <div class="card-header">
@@ -43,3 +46,6 @@
     </div>
   </div>
 </form>
+<?php
+ include "View/footer.php";
+?>

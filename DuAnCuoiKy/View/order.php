@@ -15,7 +15,7 @@
 	<!-- Checkout -->
 
 	<div class="checkout">
-		<div class="container">
+		<div class="container" style="margin-top:60px;">
 			<div class="row">
       <?php
             if(!isset($_SESSION['makh'])):

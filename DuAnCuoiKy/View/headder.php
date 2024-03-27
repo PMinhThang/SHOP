@@ -105,15 +105,16 @@
                 <?php } ?>
             </ul>
         </nav>
-        <div class="header_content">
-            <div class="search header_search">
+        <div class="search header_search">
                 <form action="index.php?action=sanpham&act=timkiem" method="post">
-                    <input type="text" name="txtsearch" class="search_input" placeholder="Tìm Kiếm">
-                    <button type="submit" id="search_button" class="search_button">
-                        <img src="images/magnifying-glass.svg" alt="Search">
+                    <input style="left: 400px; width:400px;"  type="text" name="txtsearch" class="search_input " placeholder="Tìm Kiếm">
+                    <button style="left: 300px; width:85px; margin-top:2px;" type="submit" id="search_button" class="search_button">
+                       
                     </button>
                 </form>
             </div>
+        <div class="header_content">
+            
             <div class="shopping">
                 <a href="index.php?action=giohang">
                     <img src="images/shopping-bag.svg" alt="Giỏ Hàng">

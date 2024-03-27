@@ -32,6 +32,14 @@ class hanghoa{
         $result=$db->exec($query);
         return $result;
     }
+    function deleteHangHoa($mahh)
+    {
+        $db = new connect();
+        $query = "DELETE FROM hanghoa WHERE mahh = $mahh";
+        $result = $db->exec($query);
+        return $result;
+    }
+
     function getMau()
     {
         $db=new connect();
@@ -51,6 +59,13 @@ class hanghoa{
     {
         $db=new connect();
         $select="select b.tenhh,sum(a.soluongmua)as soluong from cthoadon a, hanghoa b WHERE a.mahh=b.mahh group by b.tenhh";
+        $result=$db->getList($select);
+        return $result;
+    }
+    function getHangHoaAllPage($start,$limit)
+    {
+        $db=new connect();
+        $select="select * from hanghoa a, cthanghoa b where a.mahh=b.idhanghoa  limit ".$start.",".$limit;
         $result=$db->getList($select);
         return $result;
     }

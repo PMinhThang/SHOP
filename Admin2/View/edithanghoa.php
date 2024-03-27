@@ -1,4 +1,7 @@
 <?php
+ include "View/headder.php";
+?>
+<?php
   if(isset($_GET['id']))
   {
     $mahh=$_GET['id'];
@@ -103,3 +106,6 @@
     </table>
   </form>
 </div>
+<?php
+ include "View/footer.php";
+?>

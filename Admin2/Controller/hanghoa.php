@@ -39,6 +39,28 @@ switch ($act) {
 
         }
         break;
+    
+        case 'delete_hanghoa':
+            if(isset($_GET['mahh'])) {
+                $mahh = $_GET['mahh'];
+                // Gọi hàm xóa hàng hóa từ đối tượng hanghoa
+                $hh = new hanghoa();
+                $check = $hh->deleteHangHoa($mahh);
+                if($check !== false) {
+                    echo '<script>alert("Xóa dữ liệu thành công");</script>';
+                    echo '<meta http-equiv=refresh content="0;url=./index.php?action=hanghoa"/>';
+                } else {
+                    echo '<script>alert("Xóa dữ liệu không thành công");</script>';
+                    // Nếu xóa không thành công, quay lại trang danh sách hàng hóa
+                    echo '<meta http-equiv=refresh content="0;url=./index.php?action=hanghoa"/>';
+                }
+            } else {
+                // Nếu không có mã hàng hóa được cung cấp, thông báo lỗi và quay lại trang danh sách hàng hóa
+                echo '<script>alert("Không có mã hàng hóa được cung cấp");</script>';
+                echo '<meta http-equiv=refresh content="0;url=./index.php?action=hanghoa"/>';
+            }
+            break;       
+
     case 'update_hanghoa':
         include_once "./View/edithanghoa.php";
         break;
@@ -69,6 +91,8 @@ switch ($act) {
 
         }
         break;
+       
+        
 }
 
 ?>
