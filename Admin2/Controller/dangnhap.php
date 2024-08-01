@@ -21,6 +21,8 @@
                 $check=$nv->getAdmin($user,$pass);// check[admin,123456];
                 if($check!==false)
                 {
+                    $_SESSION['idnv']=$check['idnv'];
+                    $_SESSION['idcv']=$check['idcv'];
                     $_SESSION['admin']=$check['username'];
                     echo '<script>alert("Đăng nhập thành công");</script>';
                     echo '<meta http-equiv=refresh content="0;url=./index.php?action=hanghoa"/>';
@@ -32,7 +34,11 @@
                 }
             }
             break;
-       
+        case 'dangxuat':
+            unset($_SESSION['idnv']);
+            unset($_SESSION['hoten']);
+            echo '<meta http-equiv="refresh" content="0;url=./index.php?action=dangnhap&act=dangnhap"/>';
+            break;
     }
    
 ?>

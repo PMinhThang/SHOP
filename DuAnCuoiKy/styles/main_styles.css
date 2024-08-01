@@ -812,7 +812,7 @@ section
 {
 	width: 100%;
 	height: 60px;
-	background: #2f2f2f;
+	background: #ffa500;
 	text-align: center;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -835,11 +835,11 @@ section
 }
 .promo_link:hover
 {
-	background: #222222;
+	background: grey;
 }
 .promo_link:hover a
 {
-	color: #937c6f;
+	color: #09f5e1;
 }
 .promo_content
 {
@@ -1184,8 +1184,8 @@ section
 {
 	width: 100%;
 	padding-top: 88px;
-	padding-left: 44px;
-	padding-right: 44px;
+	/* padding-left: 44px;
+	padding-right: 44px; */
 	padding-bottom: 42px;
 	margin-top: 99px;
 }

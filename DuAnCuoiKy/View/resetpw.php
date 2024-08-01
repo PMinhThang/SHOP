@@ -1,59 +1,49 @@
-<section class="login-block">
+<div class="col-md-3"></div>
+<div class="col-md-6" id="reset">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 login-sec">
-        <!-- <h3 class="text-center"><b>Login Now</b></h3> -->
-      
-      
-        <form  action="" class="login-form" method="post">
-        
-            <input type="hidden" name="email" value="">
-            <p>Enter New password</p>
-            <input type="password" name='password'>
-            <input type="submit" name="submit_password">
-
+      <div class=" login">
+        <form action="index.php?action=forget&act=resetpass" class="login-form" method="post">
+          <input type="hidden" name="email" value="">
+          <p>Nhập Lại Mật Khẩu Đã Được Cấp</p>
+          <input type="text" autocomplete="off" required class="form-control rounded-10px" name='password'>
+          <u><i>Lưu ý: Dùng mật khẩu để đăng nhập vào tài khoản</i></u><br><hr>
+          <input type="submit" class="vmt btn" name="submit_password">
         </form>
-      
-        <div class="copy-text">Shop Giày <i class="fa fa-heart"></i> <a href="http://grafreez.com">shopgiay.com</a></div>
-      </div>
-      <div class="col-md-8 banner-sec">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <img class="d-block img-fluid" src="Content/imagetourdien/9521597014227.png" alt="First slide">
-              <div class="carousel-caption d-none d-md-block">
-                <div class="banner-text">
-                  <h2>This is Heaven</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg" alt="First slide">
-              <div class="carousel-caption d-none d-md-block">
-                <div class="banner-text">
-                  <h2>This is Heaven</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg" alt="First slide">
-              <div class="carousel-caption d-none d-md-block">
-                <div class="banner-text">
-                  <h2>This is Heaven</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </div>
     </div>
-</section>
+  </div>
+</div>
+<div class="col-md-3"></div>
+<style>
+  #reset {
+    margin-top: 100px;
+  }
+  #reset .container{
+    border: 1px solid #ccc;
+    /* Đường viền của khung */
+    border-radius: 8px;
+    /* Bo tròn góc khung */
+    padding: 5px;
+    /* Đệm bên trong khung */
+    overflow: hidden;
+    /* Đảm bảo không có phần tử nào tràn ra ngoài */
+    position: relative;
+    /* Để định vị chính xác nút xóa */
+  }
+  #reset .form-control{
+    font-size: 18px;
+  }
+  #reset .vmt{
+    font-size: 20px;
+    background: orange;
+    color: white;
+  }
+  .login{
+    position: relative;
+    left: 165px;
+  }
+  .login p{
+    text-align: center;
+  }
+</style>

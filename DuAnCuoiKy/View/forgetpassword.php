@@ -1,4 +1,4 @@
-<div class="container" style="margin-top:100px;">
+<div class="container" style="margin-top:150px;">
     <div class="row justify-content-center">
         <div class="col-md-6 login-sec">
             <div class="card">
@@ -12,10 +12,10 @@
                         <button type="submit" name="submit_email" class="btn btn-primary btn-block">Gửi Liên Kết</button>
                     </form>
                 </div>
-                <div class="card-footer text-muted text-center">
-                    <div class="copy-text">Shop Áo <i class="fa fa-heart"></i> <a href="http://grafreez.com">shopao.com</a></div>
-                </div>
             </div>
         </div>
     </div>
 </div>
+<?php
+    include_once "View/footer.php";
+?>

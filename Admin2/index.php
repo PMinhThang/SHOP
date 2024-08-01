@@ -32,12 +32,19 @@ function myModelClass($classname)
     <!-- end -->
     <!-- end link đăng nhập -->
     <link rel="stylesheet" type="text/css" href="../Content/CSS/Tour.css" />
-    <title>Admin SanPham</title>
+    <title>KissNote Admin</title>
+      <link rel="website icon" type="png" href="Content/imagetourdien/af.jpg" >
 </head>
 
 <body>
 <!-- Thanh header tao menu -->
 
+<?php 
+if(isset($_GET['action']) && $_GET['action'] != 'dangnhap')
+{
+    include "View/headder.php";
+}
+?>
         <!-- end hinh dong -->
         <!-- phan thân -->
         <div class="container">

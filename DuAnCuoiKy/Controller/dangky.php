@@ -45,8 +45,15 @@ switch ($act) {
                 $inskh=$kh->insertKhachHang($tenkh,$user,$passnew,$email,$diachi,$sodt);
                 if($inskh!==false)
                 {
-                    echo '<script> alert("Đăng ký thành công");</script>';
-                    include_once "./View/home.php";
+                    $logkh=$kh->logKhachHang($user,$passnew);
+                    if($logkh)
+                    {
+                        // nếu đăng nhập thành công thì lưu thông tin vào trong section
+                        $_SESSION['makh']=$logkh['makh'];
+                        $_SESSION['tenkh']=$logkh['tenkh'];
+                        echo '<script> alert("Đăng ký thành công");</script>';
+                        echo '<meta http-equiv="refresh" content="0;url=./index.php?action=home"/>';
+                    }
                 }
                 else
                 {

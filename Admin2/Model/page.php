@@ -1,12 +1,13 @@
 <?php
 class Page{
-
+    // phương thức tính số trang dựa vào tổng số sp và limit
     function findPage($count,$limit)
     {
         $page=(($count%$limit)==0?$count/$limit:ceil($count/$limit));
-        return $page;
+        return $page;//2
     }
- 
+    //phương thức tính start bắt đầu caanf lấy giá trị trong sql
+    // dựa vào curent_page trên URL, thông qua biến tự đặt tên là page
 
     function  findStart($limit)
     {
@@ -17,7 +18,7 @@ class Page{
         else{
             $start=($_GET['page']-1)*$limit;
         }
-        return $start;
+        return $start;//8
     }
 }
 ?>

@@ -44,12 +44,12 @@ switch ($act) {
                 // set the SMTP port for the GMAIL server
                 $mail->Port = "587"; // 465
                 $mail->From = 'thangava0709@gmail.com';
-                $mail->FromName = 'Ly';
+                $mail->FromName = 'KissNoteShop';
                 // $getemail là địa chỉ mail mà người nhập vào địa chỉ của họ đã đăng ký trong trang web
                 $mail->AddAddress($email, 'reciever_name');
                 $mail->Subject = 'Reset Password';
                 $mail->IsHTML(true);
-                $mail->Body = 'Cấp lại mã code ' . $code . '';
+                $mail->Body = 'Cấp lại mật khẩu ' . $code . '';
                 if ($mail->Send()) {
                     echo '<script> alert("Check Your Email and Click on the 
                         link sent to your email");</script>';
@@ -68,6 +68,30 @@ switch ($act) {
 
         }
         break;
+    case 'resetpass':
+        //nhận pass new mà người dùng nhập vào
+        if (isset($_POST['submit_password'])) {
+            $pass = $_POST['password'];
+            $email = $_POST['email'];
+            //dò lại trong session, đối tượng nào có pass giống với pass đó
+            foreach ($_SESSION['email'] as $key => $item) {
+                if ($item['id'] == $pass) {
+                    $salfF = "G435#";
+                    $salfL = "T34a!&";
+                    $passnew = md5($salfF . $pass . $salfL);
+                    //với id đó lấy lại email của người gửi email
+                    $emailold = $item['email'];
+                    $kh = new user();
+                    $kh->updateEmail($emailold, $passnew);
+                    echo '<meta http-equiv="refresh" content="0;url=./index.php?action=dangnhap"/>';
+                } else {
+                    echo '<script> alert("Hãy nhập đúng mật khẩu đã được cấp");</script>';
+                    include "./View/resetpw.php";
+                }
+            }
+        }
+        break;
+
 }
 
 ?>

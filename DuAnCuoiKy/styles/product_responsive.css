@@ -45,8 +45,8 @@
 	}
 	.shopping
 	{
-		padding-right: 100px;
-		margin-left: 100px;
+		padding-right: 140px;
+    	margin-left: -50px;
 	}
 }
 
@@ -58,7 +58,7 @@
 {
 	.shopping
 	{
-		padding-right: 74px;
+		padding-right: 90px;
 		margin-left: 60px;
 	}
 }

@@ -1,5 +1,5 @@
 <?php
- include "View/headder.php";
+include "View/headder.php";
 ?>
 <form name="frmloaihang" action="" method="post">
   <div class="card mt-3">
@@ -7,6 +7,7 @@
       QUẢN LÝ LOẠI HÀNG
     </div>
     <div class="card-body">
+      
       <table class="table table-striped table">
         <thead>
           <tr class="bg-info">
@@ -19,18 +20,18 @@
           </tr>
         </thead>
         <tbody>
-          
-                    <tr>
-                      <th scope="row"><input type="checkbox" id="chonX" name="chonX" value="" ></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td>
-                        <a href="" class="btn btn-warning">Xoá</a>
-                        <a href="" class="btn btn-info">Sửa</a>
-                      </td>
-                    </tr>
-					
+
+          <tr>
+            <th scope="row"><input type="checkbox" id="chonX" name="chonX" value=""></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <a href="" class="btn btn-warning">Xoá</a>
+              <a href="" class="btn btn-info">Sửa</a>
+            </td>
+          </tr>
+
           <input type="hidden" name="xoa" value="" />
         </tbody>
       </table>
@@ -47,5 +48,5 @@
   </div>
 </form>
 <?php
- include "View/footer.php";
+include "View/footer.php";
 ?>

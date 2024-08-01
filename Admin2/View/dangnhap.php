@@ -20,7 +20,6 @@
 
 								</form>
 
-			<p style="margin-top: 4%" align="center"><a href="">Back to Home</a>	</p>
 							</div>
 
 						</div>

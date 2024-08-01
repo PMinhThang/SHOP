@@ -23,27 +23,60 @@ switch ($act) {
             //controller yêu cầu kiểm tra xem có người này hay không?
             $kh=new user();
             $logkh=$kh->logKhachHang($user,$passnew);
-            if($logkh)
-            {
-                // nếu đăng nhập thành công thì lưu thông tin vào trong section
-                $_SESSION['makh']=$logkh['makh'];
-                $_SESSION['tenkh']=$logkh['tenkh'];
-                echo '<script> alert("Đăng nhập thành công");</script>';
-                echo '<meta http-equiv="refresh" content="0;url=./index.php?action=home"/>';
+            if ($logkh) {
+                // nếu đăng nhập thành công thì lưu thông tin vào trong session
+                $_SESSION['makh'] = $logkh['makh'];
+                $_SESSION['tenkh'] = $logkh['tenkh'];
+            
+                // Sử dụng SweetAlert2 để hiển thị thông báo và chuyển hướng
+                echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+                echo '<script>
+                    Swal.fire({
+                        title: "Đăng nhập thành công!",
+                        icon: "success",
+                        confirmButtonText: "OK",
+                        allowOutsideClick: false
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = "./index.php?action=home";
+                        }
+                    });
+                    </script>';
             }
-            else
-            {
-                echo '<script> alert("Đăng nhập không thành công");</script>';
-                // include_once "./View/registration.php";
-                echo '<meta http-equiv="refresh" content="0;url=./index.php?action=dangnhap"/>';
+            else {
+                // Sử dụng SweetAlert2 để hiển thị thông báo và chuyển hướng khi đăng nhập không thành công
+                echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+                echo '<script>
+                    Swal.fire({
+                        title: "Đăng nhập không thành công",
+                        text: "Vui lòng kiểm tra lại thông tin đăng nhập.",
+                        icon: "error",
+                        confirmButtonText: "OK",
+                        allowOutsideClick: false
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = "./index.php?action=dangnhap";
+                        }
+                    });
+                    </script>';
             }
         }
         break;
         case 'dangxuat':
             unset($_SESSION['makh']);
             unset($_SESSION['tenkh']);
+            unset($_SESSION["cart"]);
+            $gh = new hanghoa();
+            $gh->XoaYeuThich();
+
             echo '<meta http-equiv="refresh" content="0;url=./index.php?action=home"/>';
             break;
 }
     
 ?>
+<head>
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>

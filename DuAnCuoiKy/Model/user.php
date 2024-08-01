@@ -26,12 +26,50 @@ class user{
         $result=$db->getInstance($select);
         return $result;// trả về array
     }
-    function checkEmail($email)
+    function selectThongTinKH($makh)
     {
-        $db=new connect();
-        $select="select * from khachhang a where a.email='$email'";
-        $result=$db->getList($select);
+        $db = new connect();
+        $select = "select *
+            from khachhang where makh=$makh";
+        $result = $db->getInstance($select);
         return $result;
     }
+    function getUser($makh)
+    {
+        $db = new connect();
+        $select = "select * from khachhang a
+        WHERE a.makh='$makh'";
+        $result = $db->getInstance($select);
+        return $result;
+    }
+    function DoiMatKhau($makh, $passmoi)
+    {
+        $db = new connect();
+        $query = "update khachhang set matkhau='$passmoi' where makh=$makh";
+        $db->exec($query);
+    }
+    function DoiUser($makh, $tenkh,$username,$diachi,$sodienthoai,$email)
+    {
+        $db = new connect();
+        $query = "update khachhang set tenkh='$tenkh', username='$username', diachi='$diachi', sodienthoai='$sodienthoai', email='$email' where makh=$makh";
+        $db->exec($query);
+    }
+    function checkEmail($email)
+    {
+        $db = new connect();
+        $select = "select * from khachhang a where a.email='$email'";
+        $result = $db->getList($select);
+        return $result; // trả về array
+    }
+    
+    function updateEmail($email,$matkhau)
+    {
+        $db = new connect();
+        $query = "update khachhang set matkhau='$matkhau' where email='$email'";
+        $result=$db->exec($query);
+        return $result;
+    }
+    
+
 }
 ?>
